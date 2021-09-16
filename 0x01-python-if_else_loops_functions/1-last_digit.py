@@ -12,5 +12,7 @@ if number > 0:
         print("{} is {} and is less than 6 and not 0".format(number, digit))
 else:
     digit = number % -10
-    if digit < 6 and digit != 0:
+    if digit == 0:
+        print("{} is {} and is 0".format(number, digit))
+    elif digit < 6 and digit != 0:
         print("{} is {} and is less than 6 and not 0".format(number, digit))
