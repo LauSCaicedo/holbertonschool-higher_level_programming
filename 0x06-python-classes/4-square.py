@@ -18,10 +18,10 @@ class Square:
         if value < 0:
             raise TypeError("size must be >= 0")
 
-        def __init__(self, size=0):
-            """Square class"""
-            self.__size = size
+    def __init__(self, size=0):
+        """Square class"""
+        self.__size = size
 
-        def area(self):
-            """take the square of a nimber"""
+    def area(self):
+        """take the square of a nimber"""
         return self.__size ** 2
