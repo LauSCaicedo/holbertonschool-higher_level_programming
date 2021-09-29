@@ -5,12 +5,10 @@ Define class called (Square).
 
 
 class Square:
-    """
-    Define class (Square).
+    """ Define class (Square).
     """
 
     def __init__(self, size):
+        """ Private instance attribute (Size).
         """
-        Private instance attribute (Size).
-        """
-        self._size = size
+        self.__size = size
