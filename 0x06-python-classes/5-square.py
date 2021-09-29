@@ -30,6 +30,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        x = 0
+        z = 0
         if (self.__size) == 0:
             print('\n', end="")
         else:
