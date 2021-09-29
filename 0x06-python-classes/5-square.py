@@ -18,12 +18,12 @@ class Square:
         self.print_size = self.__size
         """prints in stdout the square with the character #"""
         if self.print_size == 0:
-            print('\n', end="")
+            print("\n", end="")
         else:
             for x in range(0, self.print_size):
                 for z in range(0, self.print_size):
                     print("#", end="")
-                print('\n', end="")
+                print("\n", end="")
 
     @size.setter
     def size(self, value):
