@@ -20,8 +20,8 @@ class Square:
         if self.print_size == 0:
             print('\n', end="")
         else:
-            for x in range(self.print_size):
-                for z in range(self.print_size):
+            for x in range(0, self.print_size):
+                for z in range(0, self.print_size):
                     print("#", end="")
                 print('\n', end="")
 
