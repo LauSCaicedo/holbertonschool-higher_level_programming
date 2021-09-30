@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""calculate the square of a number"""
+"""calculate the Rectangle of a number"""
 
 
 class Rectangle:
-    """calculate the square of a number"""
+    """calculate the Rectangle of a number"""
+
+    def __init__(self, width=0, height=0):
+        """Rectangle class"""
+        self.height = height
+        self.width = width
+
     @property
     def width(self):
         """getter func"""
@@ -14,25 +20,20 @@ class Rectangle:
         """setter func"""
         self.__width = value
         if type(value) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("size must be >= 0")
+            raise TypeError("width must be >= 0")
 
     @property
     def height(self):
         """getter func"""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         """setter func"""
         self.__height = value
         if type(value) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise TypeError("size must be >= 0")
-
-    def __init__(self, width=0, height=0):
-        """Square class"""
-        self.height = height
-        self.width = width
+            raise TypeError("height must be >= 0")
