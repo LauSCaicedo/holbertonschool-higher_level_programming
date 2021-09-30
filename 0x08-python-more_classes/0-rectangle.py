@@ -1,3 +1,13 @@
 #!/usr/bin/python3
+"""
+Define class called (Rectangle).
+"""
+
+
 class Rectangle:
-    pass
+    """
+   Define class (Rectangle) empty.
+   """
+
+
+pass
