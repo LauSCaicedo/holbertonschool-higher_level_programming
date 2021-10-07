@@ -1,12 +1,15 @@
 # test function 4-print_square
 >>> print_square = __import__('4-print_square').print_square
->>> import os
->>> os.popen('head -1 4-print_square.py').read()
-'#!/usr/bin/python3\n'
 >>> print_square(1.5)
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
+>>> print_square((5))
+#####
+#####
+#####
+#####
+#####
 >>> print_square(-1)
 Traceback (most recent call last):
 ...
@@ -19,6 +22,7 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
+>>> import os
 >>> os.path.exists("README.md")
 True
 >>> len(__import__('4-print_square').__doc__) >= 5
@@ -27,3 +31,5 @@ True
 True
 >>> os.popen('pycodestyle 4-print_square.py').read()
 ''
+>>> os.popen('head -1 4-print_square.py').read()
+'#!/usr/bin/python3\n'
