@@ -27,8 +27,8 @@ def matrix_divided(matrix, div):
             ar = isinstance(i, (int, float))
             if ar is False:
                 raise TypeError(
-                    "matrix must be a matrix \
-                    (list of lists) of integers/floats")
+                    "matrix must be a matrix"
+                    "(list of lists) of integers/floats")
             newlist.append(round(i/div, 2))
         new_matrix.append(newlist)
     return new_matrix
