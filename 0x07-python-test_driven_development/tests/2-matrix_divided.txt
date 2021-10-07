@@ -9,10 +9,18 @@
 ... ]
 >>> matrix_divided(matrix, 2)
 [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix = [
+... [9, 'k', 7],
+... [6, 5, 4]
+... ]
 >>> matrix_divided(matrix, 'a')
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
+>>> matrix = [[9], [6]]
+
+>>> matrix_divided(matrix, 6)
+[[1.5], [1.0]]
 >>> matrix_divided(matrix, "hello")
 Traceback (most recent call last):
 ...
