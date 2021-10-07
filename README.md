@@ -7,5 +7,6 @@
 5. 0x04. Python - More Data Structures: Set, Dictionary
 6. 0x05. Python - Exceptions
 7. 0x06. Python - Classes and Objects
-8. 0x08. Python - More Classes and Objects
-9. 0x09. Python - Everything is object
+8. 0x07. Python - Test-driven development
+9. 0x08. Python - More Classes and Objects
+10. 0x09. Python - Everything is object
