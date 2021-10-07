@@ -1,0 +1,41 @@
+# test function 2-matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> import os
+>>> os.popen('head -1 2-matrix_divided.py').read()
+'#!/usr/bin/python3\n'
+>>> matrix = [
+... [1, 2, 3],
+... [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix_divided(matrix, 'a')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided(matrix, "hello")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided( , 5)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+>>> matrix_divided(matrix, (5, 2))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> len(__import__('2-matrix_divided').__doc__) >= 5
+True
+>>> len(__import__('2-matrix_divided').matrix_divided.__doc__) >= 3
+True
+>>> os.popen('pycodestyle 2-matrix_divided.py').read()
+''

@@ -1,0 +1,28 @@
+# test function 3-say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> import os
+>>> os.popen('head -1 3-say_my_name.py').read()
+'#!/usr/bin/python3\n'
+>>> say_my_name("Laura", "Caicedo")
+My name is Laura Caicedo
+>>> say_my_name("Laura", 0)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name(4, "lucas")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name(4, 5)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> import os
+>>> os.path.exists("README.md")
+True
+>>> len(__import__('3-say_my_name').__doc__) >= 5
+True
+>>> len(__import__('3-say_my_name').say_my_name.__doc__) >= 3
+True
+>>> os.popen('pycodestyle 3-say_my_name.py').read()
+''

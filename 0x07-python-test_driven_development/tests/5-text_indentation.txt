@@ -1,0 +1,91 @@
+# test function 5-text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> import os
+>>> os.popen('head -1 5-text_indentation.py').read()
+'#!/usr/bin/python3\n'
+>>> text_indentation("434? 345345 55555555 345 345 34. 5")
+434?
+<BLANKLINE>
+345345 55555555 345 345 34.
+<BLANKLINE>
+5
+>>> text_indentation(434? 345345 55555555 345 345 34. 5)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation('\n')
+<BLANKLINE>
+>>> text_indentation("hello. world* how are/ you# today!")
+hello.
+<BLANKLINE>
+world* how are/ you# today!
+>>> text_indentation("hello world? how are you today" + ".")
+hello world?
+<BLANKLINE>
+how are you today.
+<BLANKLINE>
+>>> text_indentation("hello world? how are you today" + "i'm fine and. you")
+hello world?
+<BLANKLINE>
+how are you todayi'm fine and.
+<BLANKLINE>
+you
+>>> text_indentation(".hello world.")
+.
+<BLANKLINE>
+hello world.
+<BLANKLINE>
+>>> text_indentation("                                 hello world.")
+hello world.
+<BLANKLINE>
+>>> text_indentation("                im very good                 hello world.")
+im very good hello world.
+<BLANKLINE>
+>>> text_indentation(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation(9)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation('hello.:.?.:.')
+hello.
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+>>> text_indentation((7, 6, 5))
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation(['7', '6', '5'])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation({'7', '6', '5'})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> len(__import__('5-text_indentation').__doc__) >= 5
+True
+>>> len(__import__('5-text_indentation').text_indentation.__doc__) >= 3
+True
+>>> os.popen('pycodestyle 5-text_indentation.py').read()
+''
