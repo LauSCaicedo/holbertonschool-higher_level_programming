@@ -3,56 +3,6 @@
 >>> import os
 >>> os.popen('head -1 1-my_list.py').read()
 '#!/usr/bin/python3\n'
->>> MyList()
-[]
->>> MyList("Hello")
-['H', 'e', 'l', 'l', 'o']
->>> MyList(-5)
-Traceback (most recent call last):
-...
-TypeError: 'int' object is not iterable
->>> my_list = MyList()
->>> my_list.append("H")
->>> my_list.append("e")
->>> my_list.append("l")
->>> my_list.append("l")
->>> my_list.append("o")
->>> my_list.print_sorted()
-['H', 'e', 'l', 'l', 'o']
-
-
->>> my_list = MyList()
->>> my_list.append("a")
->>> my_list.append(-5)
->>> my_list.append(50)
->>> my_list.append(10)
->>> my_list.print_sorted()
-Traceback (most recent call last):
-...
-TypeError: '<' not supported between instances of 'int' and 'str'
-
-
->>> my_list = MyList()
->>> my_list.append(5)
->>> my_list.append(7)
->>> my_list.append(6)
->>> my_list.append(2)
->>> my_list.print_sorted()
-[2, 5, 6, 7]
-
-
->>> my_list = MyList()
->>> my_list.append(-1)
->>> my_list.append(-8)
->>> my_list.append(-9)
->>> my_list.append(-4)
->>> my_list.print_sorted()
-[-9, -8, -4, -1]
-
->>> my_list = MyList()
->>> my_list.append(350)
->>> my_list.print_sorted()
-[350]
 
 >>> len(__import__('1-my_list').__doc__) >= 5
 True
