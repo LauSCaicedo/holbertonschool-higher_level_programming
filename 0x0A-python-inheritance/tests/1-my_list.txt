@@ -1,8 +1,4 @@
 # test function MyList
->>> MyList = __import__('1-my_list').MyList
->>> import os
->>> os.popen('head -1 1-my_list.py').read()
-'#!/usr/bin/python3\n'
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
@@ -27,9 +23,16 @@
 >>> newlst3.print_sorted()
 [1.5, 4.5]
 
+
+>>> import os
+>>> os.path.exists("README.md")
+True
+
 >>> len(__import__('1-my_list').__doc__) >= 5
 True
 >>> len(__import__('1-my_list').MyList.__doc__) >= 3
 True
+>>> os.popen('head -1 1-my_list.py').read()
+'#!/usr/bin/python3\n'
 >>> os.popen('pycodestyle 1-my_list.py').read()
 ''
