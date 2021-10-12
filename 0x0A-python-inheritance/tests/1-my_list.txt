@@ -1,4 +1,4 @@
-# test function 2-matrix_divided
+# test function MyList
 >>> MyList = __import__('1-my_list').MyList
 >>> import os
 >>> os.popen('head -1 1-my_list.py').read()
