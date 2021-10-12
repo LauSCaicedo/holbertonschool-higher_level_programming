@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-'''
-Class MyList
-that inherits
-from list.
-'''
+"""
+print a sorted
+list from a class
+previously added
+"""
 
 
 class MyList(list):
-    '''
-    Prints the list, but sorted (ascending sort).
-    '''
+    """
+    sort the list
+    """
 
     def print_sorted(self):
         print(sorted(self))
