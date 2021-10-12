@@ -58,6 +58,13 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> my_list.print_sorted()
 [-9, -8, -4, -1]
 
+>>> my_list = MyList()
+>>> my_list.append(350)
+>>> print(my_list)
+[350]
+>>> my_list.print_sorted()
+[350]
+
 >>> len(__import__('1-my_list').__doc__) >= 5
 True
 >>> len(__import__('1-my_list').MyList.__doc__) >= 3
