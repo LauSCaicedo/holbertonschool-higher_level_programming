@@ -1,0 +1,30 @@
+# test function 7-base_geometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> BaseGeometry.integer_validator("Laura", "Luisa")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+
+
+
+
+
+>>> import os
+>>> os.path.exists("README.md")
+True
+
+>>> len(__import__('7-base_geometry').__doc__) >= 5
+True
+
+>>> len(__import__('7-base_geometry').BaseGeometry.__doc__) >= 3
+True
+
+>>> import os
+>>> os.popen('head -1 7-base_geometry.py').read()
+'#!/usr/bin/python3\n'
+
+>>> os.popen('pycodestyle 7-base_geometry.py').read()
+''
