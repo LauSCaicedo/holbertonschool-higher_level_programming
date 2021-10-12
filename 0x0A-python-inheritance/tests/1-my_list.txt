@@ -1,4 +1,12 @@
-# test function MyList
+=================================
+Function that prints sorted
+=================================
+
+---------------------------------
+Using function ``print_sorted``
+---------------------------------
+
+Import the add_integer module:
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
@@ -23,16 +31,33 @@
 >>> newlst3.print_sorted()
 [1.5, 4.5]
 
+-------------
+Requirements
+-------------
+
+README Create and not empty:
 
 >>> import os
 >>> os.path.exists("README.md")
 True
 
+Module documentation:
+
 >>> len(__import__('1-my_list').__doc__) >= 5
 True
+
+Function documentation:
+
 >>> len(__import__('1-my_list').MyList.__doc__) >= 3
 True
+
+Shebang at the beginning of the file:
+
+>>> import os
 >>> os.popen('head -1 1-my_list.py').read()
 '#!/usr/bin/python3\n'
+
+pycodestyle correct:
+
 >>> os.popen('pycodestyle 1-my_list.py').read()
 ''
