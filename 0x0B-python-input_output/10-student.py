@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-'''
-Write a class
-Student that
-defines a student.
-'''
+"""
+Write a class Student that defines
+a student by and instantiation with
+first_name, last_name and age
+"""
 
 
-class Student:
-    '''
-    Public instance attributes.
-    '''
+class Student():
+    """
+    Create the class Student
+    """
 
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -17,10 +17,10 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        ''' attrs is a list of strings, only attribute
-        names contained in this list must be retrieved
-        '''
-
+        """
+        Public method that retrieves a dictionary
+        representation of a Student instance
+        """
         new_dic = {}
         if type(attrs) is list:
             for i in attrs:
@@ -29,5 +29,5 @@ class Student:
                 else:
                     pass
         else:
-            new_dic = self.dict
+            new_dic = self.__dict__
         return new_dic
