@@ -20,6 +20,7 @@ class Student:
         ''' attrs is a list of strings, only attribute
         names contained in this list must be retrieved
         '''
+
         new_dic = {}
         if type(attrs) is list:
             for i in attrs:
