@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-from typing import List
+'''
+Write a class
+Student that
+defines a student.
+'''
 
 
 class Student:
@@ -13,5 +17,16 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if type(attrs) is list(str):
-            return self.__dict__
+        ''' attrs is a list of strings, only attribute
+        names contained in this list must be retrieved
+        '''
+        new_dic = {}
+        if type(attrs) is list:
+            for i in attrs:
+                if type(i) is str and hasattr(self, i):
+                    new_dic[i] = getattr(self, i)
+                else:
+                    pass
+        else:
+            new_dic = self.dict
+        return new_dic
