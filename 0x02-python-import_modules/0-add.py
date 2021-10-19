@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-import add_0
-addoperation = add_0.add(1, 2)
-print(addoperation)
+if __name__ == '__main__':
+    from add_0 import add
+
+a = 1
+b = 2
+addoperation = add(a, b)
+print(f"{a} + {b} = {addoperation}")
