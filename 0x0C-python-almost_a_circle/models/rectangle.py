@@ -97,4 +97,6 @@ class Rectangle(Base):
         '''
             Method to convert to a string.
         '''
-        return (f"[{self.__class__.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return ("[{}] ({}) {}/{} - {}/{}".format(
+            self.__class__.__name__, self.id, self.__x, self.__y,
+            self.__width, self.__height))
