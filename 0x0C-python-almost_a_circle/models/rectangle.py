@@ -107,7 +107,7 @@ class Rectangle(Base):
         '''
             Method that assigns an argument to each attribute.
         '''
-        if len(args) >= 0:
+        if len(args) >= 1:
             for x, elemen_t in enumerate(args):
                 if x == 0:
                     self.id = elemen_t
