@@ -102,3 +102,20 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(
             self.__class__.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height))
+
+    def update(self, *args):
+        '''
+            Method that assigns an argument to each attribute.
+        '''
+        if len(args) >= 0:
+            for x, elemen_t in enumerate(args):
+                if x == 0:
+                    self.id = elemen_t
+                if x == 1:
+                    self.__width = elemen_t
+                if x == 2:
+                    self.__height = elemen_t
+                if x == 3:
+                    self.__x = elemen_t
+                if x == 4:
+                    self.__y = elemen_t
