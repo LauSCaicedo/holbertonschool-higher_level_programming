@@ -88,7 +88,9 @@ class Rectangle(Base):
         '''
         Method for print Rectangle.
         '''
+        print('\n' * self.__y, end="")
         for x in range(self.__height):
+            print(" " * self.__x, end="")
             for z in range(self.__width):
                 print("#", end="")
             print("")
