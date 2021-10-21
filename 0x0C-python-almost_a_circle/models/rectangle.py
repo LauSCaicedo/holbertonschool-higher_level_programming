@@ -134,6 +134,9 @@ class Rectangle(Base):
                     self.id = value
 
     def to_dictionary(self):
+        '''
+        Method that returns the dictionary representation.
+        '''
         dic1 = ("x", "y", "id", "height", "width")
         dic2 = (self.x, self.y, self.id, self.height, self.width)
         dic = dict(zip(dic1, dic2))
