@@ -17,4 +17,10 @@ class Square(Rectangle):
         Call the super class.
         '''
         super().__init__(size, size, x, y, id)
-        self.size = size
+
+    def __str__(self):
+        '''
+            Method to convert to a string.
+        '''
+        return (f"[{self.__class__.__name__}]\
+            ({self.id}) {self.x}/{self.y} - {self.width}")
