@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const process = require('process');
-const myVar = parseInt(process.argv.length);
+const myVar = process.argv.length;
 const order = process.argv.sort();
 let x = 0;
 if (myVar <= 3) {
