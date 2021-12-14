@@ -5,8 +5,8 @@ let z;
 
 if (isNaN(process.argv[2])) {
   console.log('Missing number of occurrences');
-}
-
-for (z = 0; z < size; z++) {
-  console.log('X'.repeat(size));
+} else {
+  for (z = 0; z < size; z++) {
+    console.log('X'.repeat(size));
+  }
 }
