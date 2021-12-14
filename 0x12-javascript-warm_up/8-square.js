@@ -10,9 +10,8 @@ if (isNaN(process.argv[2])) {
 
 for (z = 0; z < size; z++) {
   for (y = 0; y < size; y++) {
-    esp += 'x';
+    esp += 'X';
   }
   esp += '\n';
 }
 console.log(esp);
-
