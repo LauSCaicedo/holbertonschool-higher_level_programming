@@ -9,6 +9,5 @@ if (myVar <= 3) {
   while (x !== myVar) {
     x++;
   }
-  x -= 1;
-  console.log(order[x - 1]);
+  console.log(order[x - 2]);
 }
