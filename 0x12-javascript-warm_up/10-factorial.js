@@ -2,7 +2,7 @@
 const process = require('process');
 const myVar = parseInt(process.argv[2]);
 
-function myFact(n) {
+function myFact (n) {
   if ((isNaN(n)) || (n === 1)) {
     return (1);
   } else {
