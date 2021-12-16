@@ -10,4 +10,4 @@ if (myVar <= 3) {
     x++;
   }
   console.log(order[x - 2]);
-}
+};
