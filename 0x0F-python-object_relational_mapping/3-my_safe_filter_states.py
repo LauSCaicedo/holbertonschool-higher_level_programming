@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+""" Script that takes in arguments
+and displays all values in the states
+table of hbtn_0e_0_usa where name matches
+the argument. write one that is
+safe from MySQL injections!
+"""
 import MySQLdb
 import sys
 if __name__ == "__main__":
@@ -19,3 +25,4 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
     for row in rows:
         print(row)
+    db_database.close()
